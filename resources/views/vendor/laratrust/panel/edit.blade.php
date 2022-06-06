@@ -1,4 +1,14 @@
-<x-app-layout>
+@extends('laratrust::panel.layout')
+
+@section('title')
+  @if($type == 'role')
+    Edit Roles
+  @else
+    Edit Permissions
+  @endif
+@endsection
+
+@section('content')
   <div class="flex flex-col">
     <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-32">
       <form
@@ -98,4 +108,4 @@
       }
     }
   </script>
-</x-app-layout>
+@endsection

@@ -5084,7 +5084,7 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start(); // unhide sidebar
 
 document.getElementById('sidebarOpen').addEventListener('click', function () {
   document.getElementById('sidebar').classList.remove('hidden');
-  document.getElementById('backdrop').classList.toggle('hidden');
+  document.getElementById('backdrop').classList.remove('hidden');
 }); // theme toggle
 
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

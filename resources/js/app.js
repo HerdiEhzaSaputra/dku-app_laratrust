@@ -9,7 +9,7 @@ Alpine.start();
 // unhide sidebar
 document.getElementById('sidebarOpen').addEventListener('click', function() {
     document.getElementById('sidebar').classList.remove('hidden');
-    document.getElementById('backdrop').classList.toggle('hidden');
+    document.getElementById('backdrop').classList.remove('hidden');
 });
 
 // theme toggle

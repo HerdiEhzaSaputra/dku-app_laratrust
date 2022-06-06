@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -16,14 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
         \App\Models\User::factory()->create([
             'name' => 'Herdi',
             'email' => 'marketing@dku.id',
             'password' => Hash::make('Mekikau19'),
         ]);
 
+        \App\Models\User::factory(9)->create();
+        
         $this->call([
             LaratrustSeeder::class,
         ]);

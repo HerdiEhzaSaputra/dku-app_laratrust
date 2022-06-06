@@ -1,4 +1,4 @@
-<div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+<div class="px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
   <div class="flex-1 sm:flex sm:items-center sm:justify-end">
     <div>
       <span class="relative z-0 inline-flex shadow-sm">

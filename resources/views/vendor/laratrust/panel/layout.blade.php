@@ -1,4 +1,9 @@
 <x-app-layout>
+
+  <x-slot name="header">
+      @yield('title')
+  </x-slot>
+
   <nav class="bg-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-center h-16">
@@ -59,13 +64,13 @@
     </div>
   </nav>
 
-  <header class="bg-white shadow">
+  {{-- <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold leading-tight text-gray-900">
         @yield('title')
       </h1>
     </div>
-  </header>
+  </header> --}}
   <main>
     <div class="max-w-6xl mx-auto py-6 sm:px-6 lg:px-8">
       @foreach (['error', 'warning', 'success'] as $msg)
