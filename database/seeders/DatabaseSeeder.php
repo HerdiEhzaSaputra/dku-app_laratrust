@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Database\Seeders\LaratrustSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +22,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Herdi',
             'email' => 'marketing@dku.id',
             'password' => Hash::make('Mekikau19'),
+        ]);
+
+        $this->call([
+            LaratrustSeeder::class,
         ]);
     }
 }

@@ -7,7 +7,7 @@
         @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300;
     }
     .nav-button-active {
-        @apply text-white bg-gray-900;
+        @apply text-white bg-gray-800;
     }
 
     .nav-button:focus, .nav-button-active:focus {

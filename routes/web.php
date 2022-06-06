@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Laratrust\PermissionsController;
-use App\Http\Controllers\Laratrust\RoleAssignmentController;
-use App\Http\Controllers\Laratrust\RoleController;
+use Laratrust\Http\Controllers\PermissionsController;
+use Laratrust\Http\Controllers\RolesController;
+use Laratrust\Http\Controllers\RolesAssignmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +24,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('/permissions', 'PermissionsController', ['as' => 'laratrust'])
+    ->only(['index', 'create', 'store', 'edit', 'update']);
 
+Route::resource('/roles', 'RolesController', ['as' => 'laratrust']);
+
+Route::resource('/roles-assignment', 'RolesAssignmentController', ['as' => 'laratrust'])
+    ->only(['index', 'edit', 'update']);
 
 require __DIR__.'/auth.php';
