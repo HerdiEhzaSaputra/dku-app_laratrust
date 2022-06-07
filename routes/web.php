@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Laratrust\Http\Controllers\PermissionsController;
 use Laratrust\Http\Controllers\RolesController;
@@ -20,8 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/users', \App\Http\Livewire\Users\Index::class)->name('users.index');
+    Route::get('/users/create', \App\Http\Livewire\Users\Create::class)->name('users.create');
+    Route::get('/users/edit/{id}', \App\Http\Livewire\Users\Edit::class)->name('users.edit');
+
+});
+
 
 require __DIR__.'/auth.php';

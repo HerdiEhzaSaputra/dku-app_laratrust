@@ -33,7 +33,7 @@
         <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200">
 
             <div id="backdrop" :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="hidden fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
-            
+
             <livewire:layouts.side-bar />
 
                 <div class="flex-1 flex flex-col overflow-hidden">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         @livewireScripts
