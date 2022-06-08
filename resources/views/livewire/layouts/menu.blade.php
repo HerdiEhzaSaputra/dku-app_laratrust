@@ -26,10 +26,10 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <ul id="dropdown-example" class="{{ request()->is('*manage*') ? 'block' : 'hidden' }} py-2 space-y-2">
+            <ul id="dropdown-example" class="{{ request()->is('users*') ? 'block' : 'hidden' }} py-2 space-y-2">
                 <li>
-                    <a href="{{ route('laratrust.roles-assignment.index') }}"
-                        class="{{ request()->is('*roles-assignment*') ? 'nav-button-active text-white dark:text-gray-800 dark:bg-gray-200' : 'nav-button' }} flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700">Users</a>
+                    <a href="{{ route('users.index') }}"
+                        class="{{ request()->is('*users') ? 'nav-button-active text-white dark:text-gray-800 dark:bg-gray-200' : 'nav-button' }} flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700">Users</a>
                 </li>
                 @role('super-user')
                 <li>
