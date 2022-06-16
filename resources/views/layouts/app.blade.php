@@ -47,7 +47,7 @@
                     <livewire:layouts.nav-bar />
 
                     <!-- Page Heading -->
-                    @isset($header)
+                    {{-- @isset($header)
                         <header class="bg-white dark:bg-gray-800 shadow">
                             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -55,17 +55,26 @@
                                     </h2>
                             </div>
                         </header>
-                    @endisset
+                    @endisset --}}
 
                     <!-- Page Content -->
                     <main class="flex-1 overflow-x-hidden overflow-y-auto px-4 py-4 dark:bg-gray-800">
+                        <x-alert />
+
                         {{ $slot }}
+
                     </main>
                 </div>
             </div>
         </div>
 
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+            function close_alert() {
+                document.querySelector('alert-compnt').classList.add('animate-alert-close');
+            }
+        </script>
 
         @livewireScripts
     </body>
