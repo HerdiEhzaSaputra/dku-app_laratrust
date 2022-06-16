@@ -172,7 +172,7 @@ return [
          * Method to be called in the middleware return case.
          * Available: abort|redirect
          */
-        'handling' => 'abort',
+        'handling' => 'redirect',
 
         /**
          * Handlers for the unauthorized method in the middlewares.
@@ -184,7 +184,7 @@ return [
              */
             'abort' => [
                 'code' => 403,
-                'message' => 'User does not have any of the necessary access rights.'
+                'message' => 'Maaf Anda tidak memiliki akses, harap hubungi Admin untuk mendapatkan hak akses'
             ],
 
             /**
@@ -194,10 +194,10 @@ return [
              * If the message content is empty it won't be added to the redirection.
              */
             'redirect' => [
-                'url' => '/home',
+                'url' => '/users',
                 'message' => [
-                    'key' => 'error',
-                    'content' => ''
+                    'key' => 'warning',
+                    'content' => 'Maaf Anda tidak memiliki akses, harap hubungi Admin untuk mendapatkan hak akses.'
                 ]
             ]
         ]
@@ -299,7 +299,7 @@ return [
         | These middleware will get attached onto each Laratrust panel route.
         |
         */
-        'middleware' => ['web'],
+        'middleware' => ['web', 'role:admin'],
 
         /*
         |--------------------------------------------------------------------------
