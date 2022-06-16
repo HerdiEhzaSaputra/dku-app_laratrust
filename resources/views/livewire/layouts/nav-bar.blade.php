@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center py-4 px-6 bg-gray-50 dark:bg-gray-800">
+<header class="flex justify-between items-center py-4 px-6 dark:bg-slate-700 duration-300">
     <div class="flex items-center">
         <button id="sidebarOpen" @click="sidebarOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

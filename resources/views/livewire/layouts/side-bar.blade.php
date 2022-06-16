@@ -1,6 +1,6 @@
-<div id="sidebar" :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" 
-    class="hidden md:block fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-50  dark:bg-gray-800 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
-    <div class="sticky top-0 flex items-center justify-center py-3 bg-gray-50  dark:bg-gray-800">
+<div id="sidebar" :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
+    class="hidden md:block fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-100  dark:bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+    <div class="sticky top-0 flex items-center justify-center py-3 bg-gray-100  dark:bg-gray-900">
         <div class="flex items-center">
             <svg class="h-12 w-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

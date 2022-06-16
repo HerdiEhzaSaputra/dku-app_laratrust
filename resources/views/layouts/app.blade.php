@@ -13,6 +13,12 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        <style>
+            .modal-backdrop {
+                background-color: white !important
+            }
+        </style>
+
         @livewireStyles
 
         <!-- Scripts -->
@@ -30,7 +36,7 @@
     </head>
     <body class="font-sans antialiased">
 
-        <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200">
+        <div x-data="{ sidebarOpen: false }" class="flex h-screen">
 
             <div id="backdrop" :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="hidden fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
 
@@ -42,7 +48,7 @@
 
                     <!-- Page Heading -->
                     @isset($header)
-                        <header class="bg-white shadow">
+                        <header class="bg-white dark:bg-gray-800 shadow">
                             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                                         {{ $header }}
@@ -52,7 +58,7 @@
                     @endisset
 
                     <!-- Page Content -->
-                    <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 px-4 py-4">
+                    <main class="flex-1 overflow-x-hidden overflow-y-auto px-4 py-4 dark:bg-gray-800">
                         {{ $slot }}
                     </main>
                 </div>

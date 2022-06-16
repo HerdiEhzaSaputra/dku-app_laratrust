@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-dark {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 @layer components {
     .nav-button,.nav-button-active {
         @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300;
