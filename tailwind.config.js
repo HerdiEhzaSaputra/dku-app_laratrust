@@ -43,6 +43,32 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            animation: {
+                "alert": "alert 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both",
+                "alert-close": "alert-close 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both"
+            },
+            keyframes: {
+                "alert": {
+                    "0%": {
+                        transform: "scale(0)",
+                        opacity: "1"
+                    },
+                    to: {
+                        transform: "scale(1)",
+                        opacity: "1"
+                    }
+                },
+                "alert-close": {
+                    "0%": {
+                        transform: "scale(0)",
+                        opacity: "1"
+                    },
+                    to: {
+                        transform: "scale(1)",
+                        opacity: "1"
+                    }
+                }
+            },
         },
     },
 
